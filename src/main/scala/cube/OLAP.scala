@@ -1,0 +1,5 @@
+package cube
+
+class OLAP {
+  
+}
