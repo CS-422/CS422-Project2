@@ -13,7 +13,7 @@ class SimilarityJoin(numAnchors: Int, distThreshold:Int) extends java.io.Seriali
   
   /*
    * this method gets as input a dataset and the index of an attribute
-   * of the dataset, and returns result of the similarity self join on
+   * of the dataset, and returns the result of the similarity self join on
    * that attribute.
    * */  
   def similarity_join(dataset: Dataset, attrIndex: Int) : RDD[(String, String)] = {
