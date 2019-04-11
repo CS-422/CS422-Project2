@@ -1,5 +1,0 @@
-package cube
-
-class OLAP {
-  
-}
