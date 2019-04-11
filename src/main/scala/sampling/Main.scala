@@ -26,7 +26,9 @@ object Main {
     desc.e = 0.1
     desc.ci = 0.95
 
-    (desc.samples, desc.sampleDescription) = Sampler.sample(desc.lineitem, 1000000, desc.e, desc.ci)
+    val tmp = Sampler.sample(desc.lineitem, 1000000, desc.e, desc.ci)
+    desc.samples = tmp._1
+    desc.sampleDescription = tmp._2
 
     // check storage usage for samples
 
