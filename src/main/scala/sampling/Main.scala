@@ -21,16 +21,16 @@ object Main {
       Nil
     ))
 
-    var tables = new Tables
-    tables.lineitem = table
-    tables.e = 0.1
-    tables.ci = 0.95
+    var desc = new Description
+    desc.lineitem = table
+    desc.e = 0.1
+    desc.ci = 0.95
 
-    tables.samples = Sampler.sample(tables.lineitem, 1000000, tables.e, tables.ci)
+    (desc.samples, desc.sampleDescription) = Sampler.sample(desc.lineitem, 1000000, desc.e, desc.ci)
 
     // check storage usage for samples
 
     // Execute first query
-    Executor.execute_Q1(tables, session, List("3 months"))
+    Executor.execute_Q1(desc, session, List("3 months"))
   }     
 }
