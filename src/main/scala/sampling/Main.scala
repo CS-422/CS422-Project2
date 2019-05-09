@@ -9,7 +9,7 @@ object Main {
   def main(args: Array[String]) {
 
     val conf = new SparkConf().setAppName("app").setMaster("local[*]")
-    val sc = SparkContext.getOrCreate()
+    val sc = SparkContext.getOrCreate(conf)
     val session = SparkSession.builder().getOrCreate();
 
     val rdd = RandomRDDs.uniformRDD(sc, 100000)
